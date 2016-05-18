@@ -1,0 +1,26 @@
+<h3>Input your vehicle:</h3>
+
+<form action='/cars' method='post'>
+	<label for='years'>Year:</label>
+	<select class='year-select' name='years'>
+		<option selected disabled hidden></option>
+		<option value='2016'>2016</option>
+		<option value='2015'>2015</option>
+		<option value='2014'>2014</option>
+	</select>
+	<br>
+	<label for='makes' class='make-select hidden'>Make:</label>
+	<select class='make-select hidden' name='makes'>
+		<option selected disabled hidden></option>
+	</select>
+	<br>
+	<label for='models' class='model-select hidden'>Model:</label>
+	<select class='model-select hidden' name='models'>
+		<option selected disabled hidden></option>
+	</select>
+	<br>
+<!-- 	<label for='trims' class='trim-select hidden'>Trim Level:</label>
+	<select class='trim-select hidden' name='trims'></select>
+	<br> -->
+	<input type='submit' value='submit' class='hidden'>
+</form>

@@ -1,0 +1,9 @@
+<% if session[:user_id] %>
+
+<%= erb :'_car_form' %>
+
+<% else %>
+
+<p>Please log in to start registering your cars!</p>
+
+<% end %>

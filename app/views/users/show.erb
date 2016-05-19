@@ -1,7 +1,17 @@
-<% @user.vehicles.each do |vehicle| %>
+<div class='vehicle-list'>
 
-<h4> <%= vehicle.year %> </h4>
-<h4> <%= vehicle.make %> </h4>
-<h4> <%= vehicle.model %> </h4>
+<% @user.vehicles.each do |vehicle| %>
+  <div class='vehicle-container'>
+    <div class='vehicle-details'>
+      <p> <%= vehicle.year %> </p>
+      <p> <%= vehicle.make %> </p>
+      <p> <%= vehicle.model %> </p>
+      <p>Estimated Resale Value: $<%= sprintf('%2.f',vehicle.get_resale) %> </p>
+    </div>
+    <div class='alerts'>
+      <p>There are no alerts for this vehicle</p>
+    </div>
+  </div>
 
 <% end %>
+</div>

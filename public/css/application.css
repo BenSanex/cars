@@ -1,3 +1,35 @@
+html {
+  max-width:800px;
+  margin:auto;
+  background-color:deepskyblue;
+  color:white;
+}
+
 .hidden {
 	display:none;
+}
+
+form {
+  color:black;
+}
+
+.vehicle-list {
+  border:1px solid black;
+  padding: 0px 20px 20px 20px ;
+}
+.vehicle-details {
+  border-bottom:1px solid black;
+}
+.vehicle-container {
+  border-bottom:1px solid black;
+  margin:auto;
+  display:inline-block;
+}
+
+.alerts {
+  display:inline-block;
+}
+
+p {
+  font-size: 20px;
 }

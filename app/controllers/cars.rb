@@ -4,6 +4,7 @@ post '/cars' do
 	@car.make = params[:makes]
 	@car.year = params[:years]
 	@car.user_id = session[:user_id]
+  @car.style_id = params[:style_id]
 	@car.save!
-	redirect '/'
+	redirect '/users/profile'
 end

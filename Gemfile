@@ -14,6 +14,7 @@ gem 'rake'
 
 gem 'shotgun'
 gem 'image_suckr'
+gem 'bcrypt'
 
 group :test do
   gem 'shoulda-matchers'

@@ -17,6 +17,7 @@ GEM
     addressable (2.4.0)
     arel (6.0.3)
     backports (3.6.8)
+    bcrypt (3.1.11)
     builder (3.2.2)
     capybara (2.7.1)
       addressable
@@ -38,7 +39,7 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.0.0)
     minitest (5.9.0)
-    multi_json (1.12.0)
+    multi_json (1.12.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
@@ -89,6 +90,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 4.2.0)
   activesupport (~> 4.2.0)
+  bcrypt
   capybara
   factory_girl
   faker
@@ -103,4 +105,4 @@ DEPENDENCIES
   sinatra-contrib
 
 BUNDLED WITH
-   1.12.2
+   1.12.4

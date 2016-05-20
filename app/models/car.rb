@@ -1,4 +1,4 @@
-class Vehicle < ActiveRecord::Base
+class Car < ActiveRecord::Base
 	belongs_to :user
 
   def get_resale
@@ -9,8 +9,11 @@ class Vehicle < ActiveRecord::Base
 
   end
 
-  def get_recalls
-
+  def recalls
+    uri = URI('https://api.edmunds.com/v1/api/maintenance/recall/'+self.style_id.to_s+'?fmt=json&api_key='+API_KEY)
+    raw_json = Net::HTTP.get(uri)
+    parsed_data = JSON.parse(raw_json, symbolize_names: true)
+    return parsed_data[:recallHolder]
   end
 
 end

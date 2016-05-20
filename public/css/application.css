@@ -1,8 +1,8 @@
 html {
   max-width:800px;
   margin:auto;
-  background-color:deepskyblue;
-  color:white;
+  background-color:darkslategray;
+  color:whitesmoke;
 }
 
 .hidden {
@@ -32,4 +32,16 @@ form {
 
 p {
   font-size: 20px;
+}
+
+a {
+  text-decoration:none;
+  background-color:black;
+  color:salmon;
+  padding:10px;
+  font-size:20px;
+}
+
+a:hover {
+  color:deepskyblue;
 }

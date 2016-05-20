@@ -1,5 +1,5 @@
 post '/cars' do
-	@car = Vehicle.new()
+	@car = Car.new()
 	@car.model = params[:models]
 	@car.make = params[:makes]
 	@car.year = params[:years]
@@ -8,3 +8,4 @@ post '/cars' do
 	@car.save!
 	redirect '/users/profile'
 end
+

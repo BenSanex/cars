@@ -1,6 +1,6 @@
 <div class='vehicle-list'>
 
-<% @user.vehicles.each do |vehicle| %>
+<% @user.cars.each do |vehicle| %>
   <div class='vehicle-container'>
     <div class='vehicle-details'>
       <p> <%= vehicle.year %> </p>
@@ -9,9 +9,13 @@
       <p>Estimated Resale Value: $<%= sprintf('%2.f',vehicle.get_resale) %> </p>
     </div>
     <div class='alerts'>
-      <p>There are no alerts for this vehicle</p>
+      <% recalls = vehicle.recalls %>
+      <% if recalls.length == 0 %>
+        <p>There are no alerts for this vehicle</p>
+      <% else %>
+        <p>This vehicle has <%= recalls.length %> active alerts %>
+      <% end %>
     </div>
   </div>
-
 <% end %>
 </div>
